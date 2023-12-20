@@ -43,19 +43,19 @@ const Services = () => {
     return (
         <section className='max-w-[1200px] mx-auto px-5'>
             <div className="space-y-5 mb-10">
-                <h3 className="text-3xl text-center font-extrabold text-headning-color">I CAN HELP YOU WITH</h3>
+                <h3 className="md:text-3xl text-2xl text-center font-extrabold text-headning-color">I CAN HELP YOU WITH</h3>
                 <div className='border border-headning-color w-40 mx-auto'></div>
             </div>
-            <div className='grid grid-cols-3 gap-5'>
+            <div className='grid lg:grid-cols-3 gap-5'>
                 {
                     services.map((service, index) => <div
                         key={index}
-                        className='border border-[#D5DCE1] shadow-md hover:shadow-xl p-6 rounded-lg duration-300 flex'
+                        className='border border-[#D5DCE1] shadow-md hover:shadow-xl p-6 rounded-lg duration-300 sm:flex space-y-2'
                     >
-                        <figure className='max-w-[20%] items-center flex'>
+                        <figure className='max-w-[20%] items-center flex mx-auto sm:mx-0'>
                             <img className='w-3/4' src={service.img} alt="Card-Image" />
                         </figure>
-                        <div className='space-y-3'>
+                        <div className='sm:space-y-3 space-y-1 grid content-center text-center sm:text-left'>
                             <h3 className='text-xl font-bold text-headning-color'>{service.title}</h3>
                             <p className='text-[#506690]'>{service.description}</p>
                         </div>

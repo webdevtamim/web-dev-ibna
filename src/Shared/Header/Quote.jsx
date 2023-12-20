@@ -29,10 +29,9 @@ const Quote = () => {
     }
 
     return (
-        <dialog id="my_modal_3" className="modal text-white">
-            <div className="modal-box bg-gradient-to-b from-[#4C6EF5] to-[#293D7C] max-w-[650px] max-h-screen rounded-none">
+        <dialog id="my_modal_3" className="modal text-white bg-[#000000b3]">
+            <div className="modal-box bg-gradient-to-b from-[#4C6EF5] to-[#293D7C] sm:max-w-[650px] w-full max-h-screen rounded-none">
                 <form method="dialog">
-                    {/* if there is a button in form, it will close the modal */}
                     <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                 </form>
                 <h3 className="font-semibold text-3xl border-b mb-7 pb-7">Web Dev Ibna.</h3>

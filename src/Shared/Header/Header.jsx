@@ -21,8 +21,7 @@ const Header = () => {
         { name: 'SERVICES', link: '/#services' },
         { name: 'PORTFOLIO', link: '/#portfolio' },
         { name: 'REVIEWS', link: '/#reviews' },
-        { name: 'CONTACT', link: '/#contact' },
-        { name: 'BLOGS', link: '/blogs' },
+        { name: 'CONTACT', link: '/#contact' }
     ];
 
     const headerStyle = {
@@ -31,9 +30,9 @@ const Header = () => {
     };
 
     return (
-        <header className={`bg-white ${isScrolled ? 'shadow-lg sticky top-0 z-50 bg-red-400' : ''}`} style={headerStyle} >
+        <header className={`bg-white ${isScrolled ? 'shadow-lg sticky top-0 z-40 bg-red-400' : ''}`} style={headerStyle} >
             <div className="max-w-[1200px] mx-auto flex justify-between items-center py-5 lg:py-4 lg:px-5 pl-5 gap-5">
-                <div><Link to={'/'}><h3 className="text-[#282828] font-extrabold md:text-3xl text-2xl tracking-[0.5px]">Web Dev Ibna
+                <div><Link to={'/#Home'}><h3 className="text-[#282828] font-extrabold md:text-3xl text-2xl tracking-[0.5px]">Web Dev Ibna
                     <span className="text-[45px] leading-[0px]">.</span>
                 </h3></Link></div>
                 <nav className="hidden lg:block">
@@ -46,8 +45,8 @@ const Header = () => {
                         </li>)}
                     </ul>
                 </nav>
-                <div className="hidden lg:block">
-                    <button className="bg-[#282828] text-white hover:bg-btn-hover visited:bg-btn-hover focus:bg-btn-hover font-semibold text-[15px] tracking-[1px] py-[14px] px-7 rounded leading-[15px] duration-300 active:scale-x-95" onClick={() => document.getElementById('my_modal_3').showModal()}>GET A QUOTE</button>
+                <div>
+                    <button className="hidden lg:block bg-[#282828] text-white hover:bg-btn-hover visited:bg-btn-hover focus:bg-btn-hover font-semibold text-[15px] tracking-[1px] py-[14px] px-7 rounded leading-[15px] duration-300 active:scale-x-95" onClick={() => document.getElementById('my_modal_3').showModal()}>GET A QUOTE</button>
                     <Quote></Quote>
                 </div>
                 <div className="dropdown dropdown-end pr-5 lg:hidden">

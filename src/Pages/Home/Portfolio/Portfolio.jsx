@@ -36,11 +36,11 @@ const Portfolio = () => {
                     <path fill="white" d="M0 0L0 1.2 141.8 4 283.5 1.2 283.5 0z"></path>
                 </svg>
             </div>
-            <div className="space-y-5 pb-10">
-                <h3 className="text-3xl text-center font-extrabold text-headning-color">MY PORTFOLIO</h3>
+            <div className="space-y-5 pb-10 sm:pt-0 pt-5">
+                <h3 className="sm:text-3xl text-2xl text-center font-extrabold text-headning-color">MY PORTFOLIO</h3>
                 <div className='border border-headning-color w-28 mx-auto'></div>
             </div>
-            <div className="max-w-[1200px] mx-auto px-5 grid grid-cols-3 gap-10">
+            <div className="max-w-[1200px] mx-auto px-5 grid md:grid-cols-3 gap-10">
                 {portfolioImg.map(({ id, img, title, link }) => (
                     <a
                         id='portfolio-container'
@@ -53,7 +53,7 @@ const Portfolio = () => {
                         <div
                             id={`portfolio-container-${id}`}
                             style={{ backgroundImage: `url('${img}')` }}
-                            className={`h-[63vh] bg-no-repeat ${hiddenButtons[id - 1] ? 'bg-top' : 'bg-bottom duration-[4s] ease-in-out'} flex justify-center items-center bg-cover hover:brightness-50 cursor-pointer`}
+                            className={`lg:h-[63vh] md:h-[50vh] h-[70vh] bg-no-repeat ${hiddenButtons[id - 1] ? 'bg-top' : 'bg-bottom duration-[4s] ease-in-out'} flex justify-center items-center bg-cover hover:brightness-50 cursor-pointer`}
                             onMouseEnter={() => handleMouseEnter(id)}
                             onMouseLeave={() => handleMouseLeave(id)}
                         >

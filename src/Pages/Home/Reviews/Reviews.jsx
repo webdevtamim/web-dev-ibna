@@ -6,7 +6,7 @@ const Reviews = () => {
         <section id="reviews">
             <div className="max-w-[1200px] mx-auto px-5">
                 <div className="space-y-5 mb-10 pb-5 pt-[70px]">
-                    <h3 className="text-3xl text-center font-extrabold text-headning-color">WHAT MY HAPPY CLIENT'S SAY</h3>
+                    <h3 className="sm:text-3xl text-2xl text-center font-extrabold text-headning-color">WHAT MY HAPPY CLIENT'S SAY</h3>
                     <div className='border border-headning-color w-40 mx-auto'></div>
                 </div>
                 <VideoReviews></VideoReviews>

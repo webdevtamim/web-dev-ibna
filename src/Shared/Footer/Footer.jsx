@@ -55,12 +55,13 @@ const Footer = () => {
                     <path fill="white" d="M0 0L0 1.2 141.8 4 283.5 1.2 283.5 0z"></path>
                 </svg>
             </div>
-            <div className="space-y-5 pb-10">
-                <h3 className="text-3xl text-center font-extrabold text-headning-color">CONTACT ME</h3>
+            <div className="space-y-5 pb-10 sm:pt-0 pt-5">
+                <h3 className="sm:text-3xl text-2xl text-center font-extrabold text-headning-color">CONTACT ME</h3>
                 <div className='border border-headning-color w-28 mx-auto'></div>
             </div>
-            <div className="max-w-[1200px] mx-auto px-5 flex pb-24">
-                <div className="space-y-5 pb-10 w-[40%]">
+            <div className="max-w-[1200px] mx-auto px-5 md:flex flex-row-reverse md:pb-24 pb-5 space-y-12">
+                <div className="md:w-[60%]"><ContactForm></ContactForm></div>
+                <div className="space-y-5 pb-10 md:w-[40%]">
                     <h3 className="text-xl font-bold text-headning-color">CONTACT DETAILS</h3>
                     <div className='border border-headning-color w-14'></div>
                     <ul className="space-y-3 font-medium text-[#222] pt-2 pb-3">
@@ -76,15 +77,15 @@ const Footer = () => {
                     </ul>
                     <div className="flex gap-3 text-[#222]">
                         {
-                            social.map((item, index) => <a 
-                            key={index}
-                            className="bg-white p-2 rounded hover:bg-[#222] hover:text-white duration-500 hover:-translate-y-2"
-                            href={item.link}
+                            social.map((item, index) => <a
+                                key={index}
+                                className="bg-white p-2 rounded hover:bg-[#222] hover:text-white duration-500 hover:-translate-y-2"
+                                href={item.link}
                             >{item.logo}</a>)
                         }
                     </div>
                 </div>
-                <div className="w-[60%]"><ContactForm></ContactForm></div>
+
             </div>
             <div>
                 <p className="text-center text-[#506690] py-2">© Copyright Web Dev Tamim. All Rights Reserved.</p>
