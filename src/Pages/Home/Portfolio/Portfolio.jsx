@@ -19,6 +19,8 @@ import img17 from '../../../assets/portfolio/q.png';
 import img18 from '../../../assets/portfolio/r.png';
 
 const Portfolio = () => {
+    // const [portfolioImg, setPortfolioImg] = useState([]);
+
     const portfolioImg = [
         { id: 1, img: img1, title: 'Alessandronazha', link: '#' },
         { id: 2, img: img2, title: 'Sarmsup', link: '#' },
@@ -39,6 +41,12 @@ const Portfolio = () => {
         { id: 17, img: img17, title: 'Full Body Scans', link: '#' },
         { id: 18, img: img18, title: 'Ecommerce Website', link: '#' },
     ];
+
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/portfolio')
+    //         .then(res => res.json())
+    //         .then(data => setPortfolioImg(data))
+    // }, [])
 
     const [hiddenButtons, setHiddenButtons] = useState(Array(portfolioImg.length).fill(true));
     const [visibleItems, setVisibleItems] = useState(6);
