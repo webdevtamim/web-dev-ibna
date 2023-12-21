@@ -29,7 +29,7 @@ const Quote = () => {
         formData.append('file', file);
 
         
-        fetch('http://localhost:5000/work', {
+        fetch('https://ibnas-serer.vercel.app/work', {
             method: 'POST',
             body: formData,
         })

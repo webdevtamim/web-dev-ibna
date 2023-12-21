@@ -13,7 +13,7 @@ const ContactForm = () => {
 
         const messageObj = { name, email, phone, subject, message }
 
-        fetch('http://localhost:5000/message', {
+        fetch('https://ibnas-serer.vercel.app/message', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -43,7 +43,7 @@ const Portfolio = () => {
     ];
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/portfolio')
+    //     fetch('https://ibnas-serer.vercel.app/portfolio')
     //         .then(res => res.json())
     //         .then(data => setPortfolioImg(data))
     // }, [])
