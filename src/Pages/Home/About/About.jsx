@@ -27,7 +27,7 @@ const About = () => {
     return (
         <section id="about">
             <div className="grid lg:grid-cols-2 max-w-[1200px] mx-auto px-5 gap-4 pt-20">
-                <div className="pr-5 space-y-4 pt-2">
+                <div className="lg:pr-5 space-y-4 pt-2">
                     <img data-aos="fade-zoom-in" className="rounded-md shadow-xl" src={ibnaImg} alt="Mr. Ibna" />
                     <h3 className="text-xl text-center font-extrabold text-headning-color pt-5 tracking-[0.5px]">YOU CAN ALSO HIRE ME ON</h3>
                     <div className="sm:flex grid items-center gap-5 justify-center">

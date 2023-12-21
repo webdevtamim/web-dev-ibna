@@ -129,7 +129,7 @@ const Portfolio = () => {
                     <div className='text-center'>
                         <button
                             onClick={handleLoadMore}
-                            className='bg-btn-hover btn border-none mt-14 mb-20 px-8 text-white font-medium'
+                            className='bg-[#4c6ef5] hover:bg-btn-hover rounded-sm btn border-none mt-14 px-8 text-white font-semibold text-base'
                         >
                             LOAD MORE
                         </button>

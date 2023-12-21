@@ -16,33 +16,42 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navItems = [
-        { name: 'ABOUT', link: '/#about' },
-        { name: 'SERVICES', link: '/#services' },
-        { name: 'PORTFOLIO', link: '/#portfolio' },
-        { name: 'REVIEWS', link: '/#reviews' },
-        { name: 'CONTACT', link: '/#contact' }
-    ];
+    const navItems = ['ABOUT', 'SERVICES', 'PORTFOLIO', 'REVIEWS', 'CONTACT'];
 
     const headerStyle = {
         transition: "top 0.3s ease-out",
         top: isScrolled ? "0" : "-80px",
     };
 
+    const renderNavItem = (item) => {
+        const scrollId = `${item.toLocaleLowerCase()}`;
+
+        const handleClickNav = () => {
+            document.getElementById(scrollId).scrollIntoView({ behavior: "smooth" })
+        }
+
+        return (
+            <li>
+                <button className="font-semibold text-[#282828] hover:text-[#787676] hover:bg-transparent tracking-[0.5px] text-[15px] duration-300" onClick={handleClickNav}>{item}</button>
+            </li>
+        )
+    }
+
+    const handleId = () => {
+        document.getElementById('Home').scrollIntoView({ behavior: "smooth" })
+    }
+
     return (
-        <header className={`bg-white ${isScrolled ? 'shadow-lg sticky top-0 z-40 bg-red-400' : ''}`} style={headerStyle} >
+        <header id="head" className={`bg-white ${isScrolled ? 'shadow-lg sticky top-0 z-40 bg-red-400' : ''}`} style={headerStyle} >
             <div className="max-w-[1200px] mx-auto flex justify-between items-center py-5 lg:py-4 lg:px-5 pl-5 gap-5">
-                <div><Link to={'/#Home'}><h3 className="text-[#282828] font-extrabold md:text-3xl text-2xl tracking-[0.5px]">Web Dev Ibna
-                    <span className="text-[45px] leading-[0px]">.</span>
-                </h3></Link></div>
+                <div><button onClick={handleId}>
+                    <h3 className="text-[#282828] font-extrabold md:text-3xl text-2xl tracking-[0.5px]">Web Dev Ibna
+                        <span className="text-[45px] leading-[0px]">.</span>
+                    </h3>
+                </button></div>
                 <nav className="hidden lg:block">
-                    <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 font-semibold text-[#282828] tracking-[0.5px] text-[15px]">
-                        {navItems.map((navItem, index) => <li
-                            key={index}
-                            className="hover:text-[#767474] duration-300"
-                        >
-                            <a href={navItem.link}>{navItem.name}</a>
-                        </li>)}
+                    <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+                        {navItems.map(nav => renderNavItem(nav))}
                     </ul>
                 </nav>
                 <div>
@@ -51,8 +60,8 @@ const Header = () => {
                 </div>
                 <div className="dropdown dropdown-end pr-5 lg:hidden">
                     <label tabIndex={0} className="text-2xl text-[#282828] cursor-pointer"><FaAlignRight className="-mb-2"></FaAlignRight></label>
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow font-semibold text-[#282828] tracking-[0.5px] text-[15px] bg-white w-screen mx-auto mt-7 px-5 border-t rounded-none">
-                        {navItems.map((navItem, index) => <li key={index}><NavLink className="hover:text-[#767474] hover:bg-transparent duration-300" to={navItem.link}>{navItem.name}</NavLink></li>)}
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white w-screen mx-auto mt-7 px-5 border-t rounded-none">
+                        {navItems.map(nav => renderNavItem(nav))}
                     </ul>
                 </div>
             </div>

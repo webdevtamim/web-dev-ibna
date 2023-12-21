@@ -14,26 +14,9 @@ body {
 }
 
 .list-image {
-    list-style-image: url('listIcon.svg');
+    list-style-image: url('/listIcon.svg');
 }
 
 ::marker {
     font-size: 25px;
 }
-
-/* header {
-    transition-duration: 10s;
-  } */
-
-/* ::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #ff5733;
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #ccc;
-} */
